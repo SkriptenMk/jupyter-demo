@@ -4,7 +4,7 @@
     "href": "demo.html",
     "title": "Demonstration Jupyter Notebooks",
     "section": "",
-    "text": "In einem Jupyter Notebook kann formatierter Text mit ausführbarem Programmcode kombiniert werden. Jupyter Nottebooks können sowohl online wie auch lokal ausgeführt werden. Der einfachheit halber erfolgt diese Demonstration online.\nText wird grundsätzlich mit Markdown formatiert. Die Onlineplattformen stellen zusätzlich menügestützte Formatierungen zur Verfügung.\nIn den Codezellen kann Python Code ausgeführt werden. Grundsätzlich stehen auch andere Programmiersprachen zur Verfügung. Für deren Einsatz ist der Aufwand allerdings deutlich grösser.\nUm die Möglichkeiten eines Jupyter Notebooks zu demonstrieren, wird"
+    "text": "Notebook interaktiv ausführen\nIn einem Jupyter Notebook kann formatierter Text mit ausführbarem Programmcode kombiniert werden. Jupyter Nottebooks können sowohl online wie auch lokal ausgeführt werden. Der einfachheit halber erfolgt diese Demonstration online.\nText wird grundsätzlich mit Markdown formatiert. Die Onlineplattformen stellen zusätzlich menügestützte Formatierungen zur Verfügung.\nIn den Codezellen kann Python Code ausgeführt werden. Grundsätzlich stehen auch andere Programmiersprachen zur Verfügung. Für deren Einsatz ist der Aufwand allerdings deutlich grösser.\nUm die Möglichkeiten eines Jupyter Notebooks zu demonstrieren, wird"
   },
   {
     "objectID": "demo.html#meine-erste-aktivität-in-python",
