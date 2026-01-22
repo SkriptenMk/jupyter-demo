@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Einführung Jupyter Notebooks"
+  navbar:
+    left:
+      - href: index.html
+        text: Startseite
+      - href: demo.html
+        text: Demo Notebook
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: false
