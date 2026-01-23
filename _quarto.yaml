@@ -7,9 +7,7 @@ website:
   navbar:
     left:
       - href: index.html
-        text: Startseite
-      - href: demo.html
-        text: Demo Notebook
+        text: Startseite (Demo Notebook)
 
 format:
   html:
