@@ -1,0 +1,12 @@
+>.quarto
+>.venv
+>docs
+|-_metadata.yaml
+|-_quarto.yaml
+|-.gitignore
+|-data.csv
+|-daylight.py
+|-demo.ipynb
+|-folder.txt
+|-noten.csv
+|-requirements.txt
