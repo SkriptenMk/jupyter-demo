@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de-CH" xml:lang="de-CH"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,15 +67,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,9 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Suchen"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -121,7 +117,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -176,7 +172,8 @@ window.Quarto = {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#notebook-interaktiv-ausführen" id="toc-notebook-interaktiv-ausführen" class="nav-link active" data-scroll-target="#notebook-interaktiv-ausführen">Notebook interaktiv ausführen</a></li>
+  <li><a href="#notebook-online-ausführen" id="toc-notebook-online-ausführen" class="nav-link active" data-scroll-target="#notebook-online-ausführen">Notebook online ausführen</a></li>
+  <li><a href="#was-ein-jupyter-notebook-auszeichnet" id="toc-was-ein-jupyter-notebook-auszeichnet" class="nav-link" data-scroll-target="#was-ein-jupyter-notebook-auszeichnet">Was ein Jupyter Notebook auszeichnet</a></li>
   <li><a href="#meine-erste-aktivität-in-python" id="toc-meine-erste-aktivität-in-python" class="nav-link" data-scroll-target="#meine-erste-aktivität-in-python">Meine erste Aktivität in Python</a></li>
   <li><a href="#einfache-rechnungen" id="toc-einfache-rechnungen" class="nav-link" data-scroll-target="#einfache-rechnungen">Einfache Rechnungen</a>
   <ul class="collapse">
@@ -217,9 +214,13 @@ window.Quarto = {
 </header>
 
 
-<section id="notebook-interaktiv-ausführen" class="level2">
-<h2 class="anchored" data-anchor-id="notebook-interaktiv-ausführen">Notebook interaktiv ausführen</h2>
+<section id="notebook-online-ausführen" class="level2">
+<h2 class="anchored" data-anchor-id="notebook-online-ausführen">Notebook online ausführen</h2>
+<p>Grundsätzlich können Jupyter Notebooks lokal auf dem eigenen Rechner bearbeitet werden. Um den Installationsaufwand für diese Demonstration zu umgehen, stehen hier drei Möglichkeiten zur Verfügung, das Beispielnotebook online zu bearbeiten.</p>
 <p><a href="https://colab.research.google.com/github/SkriptenMk/jupyter-demo/blob/main/index.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a> <a href="https://mybinder.org/v2/gh/SkriptenMk/jupyter-demo/main?labpath=index.ipynb"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <a href="https://kaggle.com/kernels/welcome?src=https://github.com/SkriptenMk/jupyter-demo/blob/main/index.ipynb"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" class="img-fluid" alt="Kaggle"></a></p>
+</section>
+<section id="was-ein-jupyter-notebook-auszeichnet" class="level2">
+<h2 class="anchored" data-anchor-id="was-ein-jupyter-notebook-auszeichnet">Was ein Jupyter Notebook auszeichnet</h2>
 <p>In einem Jupyter Notebook kann formatierter Text mit ausführbarem Programmcode kombiniert werden. Jupyter Nottebooks können sowohl online wie auch lokal ausgeführt werden. Der einfachheit halber erfolgt diese Demonstration online.</p>
 <p>Text wird grundsätzlich mit Markdown formatiert. Die Onlineplattformen stellen zusätzlich menügestützte Formatierungen zur Verfügung.</p>
 <p>In den Codezellen kann Python Code ausgeführt werden. Grundsätzlich stehen auch andere Programmiersprachen zur Verfügung. Für deren Einsatz ist der Aufwand allerdings deutlich grösser.</p>
@@ -234,11 +235,8 @@ window.Quarto = {
 <section id="meine-erste-aktivität-in-python" class="level2">
 <h2 class="anchored" data-anchor-id="meine-erste-aktivität-in-python">Meine erste Aktivität in Python</h2>
 <p>Die Tradition will es, dass als erstes in einer neuene Programmiersprache der Computer dazu gebracht werden soll <code>Hello World</code> auszugeben. In der ersten Code Zelle wird dieser Tradition Rechnung getragen.</p>
-<div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768378591606,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="f621658c-c593-4178-ac2a-e079f8c30b8f" data-execution_count="22">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello World'</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello World</code></pre>
-</div>
+<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768378591606,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="f621658c-c593-4178-ac2a-e079f8c30b8f">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hello World'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Was geschieht in dieser Zelle? Es wird die eingebaute Funktion (man spricht im Zusammenhang mit eingebauten Funktionen von sog ‘builtins’) <code>print()</code> aufgerufen. Der Funktion wird in Klammern das Argument übergeben, das sie verarbeiten soll. Im vorliegenden Fall handelt es sich um einen einfachen Text, was hier als <code>String</code> bezeichnet wird. <code>Strings</code> sind jede Art von Anzeigbaren Zeichen.</p>
 <p>Um zu Zeigen, was Python im Unterricht bieten kann, werden in der Folge einfache Rechnungen und selber geschriebene Funktionen für Standardberechnungen vorgestellt.</p>
@@ -247,50 +245,32 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="einfache-rechnungen">Einfache Rechnungen</h2>
 <section id="recnungen-ohne-speichern-des-resultates" class="level3">
 <h3 class="anchored" data-anchor-id="recnungen-ohne-speichern-des-resultates">Recnungen ohne Speichern des Resultates</h3>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377587759,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="4463611f-e5ef-436c-a502-7765e22e23fb" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
-<pre><code>14</code></pre>
+<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377587759,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="4463611f-e5ef-436c-a502-7765e22e23fb">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377612786,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="26a5c4e0-fa53-4fc4-f548-c5dbeb7ddd7d" data-execution_count="24">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
-<pre><code>12</code></pre>
-</div>
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377612786,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="26a5c4e0-fa53-4fc4-f548-c5dbeb7ddd7d">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Ohne Zusatzpakete gibt es in Python keinen Befehl <code>quadratwurzel()</code>.</p>
-<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:46,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377638928,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="8fba6115-001b-48e0-ac1e-061dd3f98739" data-execution_count="25">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">**</span> (<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
-<pre><code>4.0</code></pre>
-</div>
+<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:46,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377638928,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="8fba6115-001b-48e0-ac1e-061dd3f98739">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="op">**</span> (<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Für die direkte Berechnung der Quadratwurzel muss das die Python Math Library importiert werden. Der volle Umfang an Funktionen bzw. Methoden, welche die Python Math Library zur Verfügung stellt, sei auf deren <a href="https://docs.python.org/3/library/math.html">Dokumentation</a> verwiesen.</p>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:7,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377686528,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="0b7cb564-21d0-4f11-984a-e4bc8abe75ac" data-execution_count="26">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>math.sqrt(<span class="dv">16</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
-<pre><code>4.0</code></pre>
+<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:7,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377686528,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="0b7cb564-21d0-4f11-984a-e4bc8abe75ac">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>math.sqrt(<span class="dv">16</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377919859,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="ee29d223-d593-4156-ae77-debd4281147f" data-execution_count="27">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>math.log2(<span class="dv">8</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="27">
-<pre><code>3.0</code></pre>
-</div>
+<div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768377919859,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="ee29d223-d593-4156-ae77-debd4281147f">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>math.log2(<span class="dv">8</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="berechnungen-mit-speichern-des-resultates" class="level3">
 <h3 class="anchored" data-anchor-id="berechnungen-mit-speichern-des-resultates">Berechnungen mit Speichern des Resultates</h3>
 <p>Damit Resultate in den folgenden Berechnungen weiter verwendet werden können, können sie Variabeln zugewiesen werden. Variabeln können in Python grundsätzlich beliebige Namen haben. Für die Darstellung von Variabeln gilt allerdings die Konvention, sie in <code>snake_case</code> zu schreiben. Ausserdem gilt es, die Liste der <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">reservierten Begriffe</a> und <a href="https://docs.python.org/3/library/functions.html">eingebauter Funktionen bzw. Methoden</a> zu berücksichtigen und nicht als Namen von Variabeln zu verwenden.</p>
 <p>Das einer Variabel zugewiesene Resultat kann mit der Funktion <code>print(variabel)</code> auch ausgegeben werden.</p>
-<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:9,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768375650050,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="a1351d5f-998f-485f-afb3-e3046f5fb734" data-execution_count="28">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>14</code></pre>
-</div>
+<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:9,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768375650050,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="a1351d5f-998f-485f-afb3-e3046f5fb734">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="eine-einfache-funktion-für-wiederkehrende-berechnungen" class="level3">
@@ -300,638 +280,142 @@ window.Quarto = {
 c = \sqrt{a^2 + b^2}
 \]</span></p>
 <p>Die hier dargestellte Formel im LaTeX Quelltext:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ss">c = </span><span class="sc">\sqrt</span><span class="ss">{a^2 + b^2}</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">c = </span><span class="sc">\sqrt</span><span class="ss">{a^2 + b^2}</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In der folgenden Zelle wird diese Formel in einer Funktion implementiert.</p>
-<div id="cell-20" class="cell" data-execution_count="29">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pythagoras(a, b):</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> (a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-21" class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pythagoras(a, b):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> (a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:71,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768380330033,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="4425854d-4291-44ef-b4b9-37b121ebf36b" data-execution_count="30">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>pythagoras(<span class="dv">3</span>, <span class="dv">4</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
-<pre><code>5.0</code></pre>
-</div>
+<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:71,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768380330033,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="4425854d-4291-44ef-b4b9-37b121ebf36b">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pythagoras(<span class="dv">3</span>, <span class="dv">4</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="erstellen-eines-pandas-dataframe" class="level2">
 <h2 class="anchored" data-anchor-id="erstellen-eines-pandas-dataframe">Erstellen eines Pandas DataFrame</h2>
 <p>Um in Python mit Daten zu Arbeiten, wird oft die Datenstruktur eines Pandas DataFrames verwendet. Pandas ist dabei eine Python Library für die Bearbeitung grosser Datensätze. Für eine ausführliche Darstellung sei an dieser Stelle auf die <a href="https://pandas.pydata.org/docs/">Pandas Dokumentation</a> verwiesen. Ein DataFrame ist im Kern eine tabellarische Darstellung der Daten.</p>
-<p>Es gibt ganz unterschiedliche Varianten einen Pandas DataFrame zu erstellen. Damit hier keine Daten konstruiert werden müssen, wurde im Vorfeld eine Datei mit den Längen der Tage in Winterthur im Jahr 2024 erstellt. Die Datei heisst <a href="data.csv"><code>data.csv</code></a>.</p>
+<p>Es gibt ganz unterschiedliche Varianten einen Pandas DataFrame zu erstellen. Damit hier keine Daten konstruiert werden müssen, wurde im Vorfeld eine Datei mit den Längen der Tage in Winterthur im Jahr 2024 erstellt. Die Datei heisst <a href="data.csv"><code>data.csv</code></a>. Die Datei wurde mit einem <a href="daylight.py">Python Script</a> unter verwendung der Library ‘astral’ erstellt.</p>
 <p>Damit ein Pandas DataFrame erstellt werden kann, muss als erstes die Pandas Library importiert werden. Um die von dieser Library zur Verfügung gestellten Befehle mit weniger Tipp-Aufwand verwenden zu können, wird ihr ein Alias zugewiesen.</p>
-<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:8,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768382520679,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-execution_count="31">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-24" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:8,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768382520679,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Daten aus CSV-Dateien werden mit dem Befehl <code>pd.read_csv()</code> eingelesen. Als Argumente nimmt der Befehl den Pfad der Datenquelle als String entgegen. Zusätzlich wird mit <code>sep=','</code> der Datentrenner spezifiziert. Wenn es sich beim Datentrenner um ein Komma handelt, kann das auch weggelassen werden weil es sich dabei um en Vorgabewert handelt. Um der Erklärung willen wurde das Argument im Beispiel aufgeführt.</p>
 <p>Standardmässig werden die Daten bei Verwendung eines einzelnen Dataframes der Variabel <code>df</code> zugewiesen.</p>
-<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:35,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768382083993,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="257c8ca9-1468-464e-fb34-3864bc6f171e">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas DataFrame erstellen</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data.csv'</span>, sep<span class="op">=</span><span class="st">','</span>)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>df.head() <span class="co"># zeigt die eresten fünf Zeilen des Dataframes; dient der Kontrolle</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Datum</th>
-<th data-quarto-table-cell-role="th">Tageslänge</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>2024-01-01</td>
-<td>8.509065</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>2024-01-02</td>
-<td>8.525051</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>2024-01-03</td>
-<td>8.542440</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>2024-01-04</td>
-<td>8.561214</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>2024-01-05</td>
-<td>8.581352</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:35,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768382083993,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="257c8ca9-1468-464e-fb34-3864bc6f171e">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas DataFrame erstellen</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data.csv'</span>, sep<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>df.head() <span class="co"># zeigt die eresten fünf Zeilen des Dataframes; dient der Kontrolle</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In diesem Beispiel werden die Daten mit <a href="https://matplotlib.org/">Matplotlib</a> visualisiert. Diese Library muss, gleich wie Pandas, zuerst importiert werden. Das Beispiel basiert auf Matplotlib.pyplot.</p>
-<div id="cell-27" class="cell" data-execution_count="34">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-28" class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In der nächsten Zelle werden die Daten in einem Liniendiagramm visualisiert.</p>
-<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:273,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768382148978,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="e1a78ee2-5d33-4f61-9d79-e10c690ec148" data-execution_count="35">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot erstellen mit Matplotlib</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>)) <span class="co"># Größe des Bildes (Breite, Höhe)</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Nimm die Spalte 'Datum' für X und 'Tageslänge' für Y</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>plt.plot(df[<span class="st">'Datum'</span>], df[<span class="st">'Tageslänge'</span>], color<span class="op">=</span><span class="st">'orange'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Beschriftungen (Wichtig für den Unterricht!)</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Tageslänge in Winterthur im Jahr 2024"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Datum"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Stunden"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>) <span class="co"># Ein Gitter hilft beim Ablesen</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Den Bereich der Y-Achse festlegen (damit es schöner aussieht)</span></span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">8</span>, <span class="dv">17</span>)</span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
+<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:273,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1768382148978,&quot;user&quot;:{&quot;displayName&quot;:&quot;Jacques Mock Schindler&quot;,&quot;userId&quot;:&quot;15993227930449788589&quot;},&quot;user_tz&quot;:-60}}" data-outputid="e1a78ee2-5d33-4f61-9d79-e10c690ec148">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot erstellen mit Matplotlib</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>)) <span class="co"># Größe des Bildes (Breite, Höhe)</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Nimm die Spalte 'Datum' für X und 'Tageslänge' für Y</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.plot(df[<span class="st">'Datum'</span>], df[<span class="st">'Tageslänge'</span>], color<span class="op">=</span><span class="st">'orange'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Beschriftungen (Wichtig für den Unterricht!)</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Tageslänge in Winterthur im Jahr 2024"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Datum"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Stunden"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>) <span class="co"># Ein Gitter hilft beim Ablesen</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Den Bereich der Y-Achse festlegen (damit es schöner aussieht)</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">8</span>, <span class="dv">17</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die Grafik kann noch schöner gestaltet werden.</p>
-<div id="cell-31" class="cell" data-execution_count="36">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> locale  <span class="co"># ermöglicht das auslesen der Spracheinstellung</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># liest die Systemsprache aus</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    locale.setlocale(locale.LC_TIME, <span class="st">'de_DE'</span>)</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> locale.Error:</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Warnung: Konnte deutsche Sprache nicht laden. Monate bleiben evtl. Englisch."</span>)</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. WICHTIG: Datum sicher in ein Zeitformat umwandeln, </span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># damit Matplotlib weiß, wie es die Achse beschriften soll.</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (Angenommen dein DataFrame heißt 'df')</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Datum'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'Datum'</span>])</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotten</span></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>plt.plot(df[<span class="st">'Datum'</span>], df[<span class="st">'Tageslänge'</span>], color<span class="op">=</span><span class="st">'orange'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Tageslänge'</span>)</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="co"># --- HIER SIND DIE ANPASSUNGEN ---</span></span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Zugriff auf die aktuelle Achse, um Formatierungen vorzunehmen</span></span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="co"># X-Achse: Zeige nur einen Tick pro Monat (Locator)</span></span>
-<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_locator(mdates.MonthLocator())</span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="co"># X-Achse: Beschrifte die Ticks mit dem Monatsnamen (Formatter)</span></span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a><span class="co"># %B = Voller Monatsname (Januar), %b = Abkürzung (Jan)</span></span>
-<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%B'</span>))</span>
-<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Damit die Monatsnamen sich nicht überlappen, rotieren wir sie leicht</span></span>
-<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------</span></span>
-<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Beschriftungen</span></span>
-<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Tageslänge in Winterthur im Jahr 2024"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Monat"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Stunden"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Gitter an den Monatsmarkierungen ausrichten</span></span>
-<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Y-Achsen Bereich</span></span>
-<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">8</span>, <span class="dv">17</span>)</span>
-<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout straffen, damit die schrägen Labels nicht abgeschnitten werden</span></span>
-<span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-52"><a href="#cb23-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
+<div id="cell-32" class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> locale  <span class="co"># ermöglicht das auslesen der Spracheinstellung</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># liest die Systemsprache aus</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    locale.setlocale(locale.LC_TIME, <span class="st">'de_DE'</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> locale.Error:</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Warnung: Konnte deutsche Sprache nicht laden. Monate bleiben evtl. Englisch."</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. WICHTIG: Datum sicher in ein Zeitformat umwandeln, </span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># damit Matplotlib weiß, wie es die Achse beschriften soll.</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (Angenommen dein DataFrame heißt 'df')</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Datum'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'Datum'</span>])</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotten</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>plt.plot(df[<span class="st">'Datum'</span>], df[<span class="st">'Tageslänge'</span>], color<span class="op">=</span><span class="st">'orange'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Tageslänge'</span>)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co"># --- HIER SIND DIE ANPASSUNGEN ---</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Zugriff auf die aktuelle Achse, um Formatierungen vorzunehmen</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co"># X-Achse: Zeige nur einen Tick pro Monat (Locator)</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_locator(mdates.MonthLocator())</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="co"># X-Achse: Beschrifte die Ticks mit dem Monatsnamen (Formatter)</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="co"># %B = Voller Monatsname (Januar), %b = Abkürzung (Jan)</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%B'</span>))</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Damit die Monatsnamen sich nicht überlappen, rotieren wir sie leicht</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Beschriftungen</span></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Tageslänge in Winterthur im Jahr 2024"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Monat"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Stunden"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Gitter an den Monatsmarkierungen ausrichten</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Y-Achsen Bereich</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">8</span>, <span class="dv">17</span>)</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout straffen, damit die schrägen Labels nicht abgeschnitten werden</span></span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="rechnen-in-pandas" class="level2">
 <h2 class="anchored" data-anchor-id="rechnen-in-pandas">Rechnen in Pandas</h2>
 <p>Mit Daten in Pandas DataFrames kann ähnlich gerechnet werden, wie in einem Tabellenkalkulationsprogramm. Das soll am Beispiel einer fiktiven Punkteliste einer Prüfung (<a href="noten.csv"><code>noten.csv</code></a>) gezeigt werden.</p>
-<div id="cell-34" class="cell" data-execution_count="37">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>noten <span class="op">=</span> pd.read_csv(<span class="st">'noten.csv'</span>, sep<span class="op">=</span><span class="st">','</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="37">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Nachname</th>
-<th data-quarto-table-cell-role="th">Vorname</th>
-<th data-quarto-table-cell-role="th">Aufgabe 1</th>
-<th data-quarto-table-cell-role="th">Aufgabe 2</th>
-<th data-quarto-table-cell-role="th">Aufgabe 3</th>
-<th data-quarto-table-cell-role="th">Aufgabe 4</th>
-<th data-quarto-table-cell-role="th">Aufgabe 5</th>
-<th data-quarto-table-cell-role="th">Aufgabe 6</th>
-<th data-quarto-table-cell-role="th">Aufgabe 7</th>
-<th data-quarto-table-cell-role="th">Aufgabe 8</th>
-<th data-quarto-table-cell-role="th">Aufgabe 9</th>
-<th data-quarto-table-cell-role="th">Aufgabe 10</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Müller</td>
-<td>Hans</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>5</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Gerber</td>
-<td>Verena</td>
-<td>1</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>0</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Meier</td>
-<td>Urs</td>
-<td>3</td>
-<td>3</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>5</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Keller</td>
-<td>Anna</td>
-<td>5</td>
-<td>1</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>Schmid</td>
-<td>Reto</td>
-<td>2</td>
-<td>4</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>2</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
+<div id="cell-35" class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>noten <span class="op">=</span> pd.read_csv(<span class="st">'noten.csv'</span>, sep<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In einem Tabllenkalkulationsprogramm werden die einzelnen Zellen mit ihren Koordinaten angesprochen. Ein Pandas DataFrame weist ein vergleichbares Koordinatensytem auf. Die einzelnen Zellen oder Bereiche können über ihre Indizes angesprochen werden. Dazu wird die Methode <code>iloc[startzeile:endzeile,startspalte:Endzeile]</code> verwendet. Zu beachten ist dabei, dass die Indizes bei <code>0</code> beginnen. Die Koordinaten im Beispiel (<code>[:,2:]</code>) bedeuten alle Zeilen und alle Spalten ab der Spalte mit Index <code>2</code>.</p>
 <p>Entsprechend funktioniert das Zusammenzählen wie in der folgenden Code Zelle gezeigt. Weil die Funktion <code>.sum()</code> stanardmässig Spalten (<code>axis=0</code>) summiert, muss für das Zeilenweise zusammenzählen explizit <code>axis=1</code> gesetzt werden.</p>
-<div id="cell-36" class="cell" data-execution_count="38">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>noten[<span class="st">'Total'</span>] <span class="op">=</span> noten.iloc[:,<span class="dv">2</span>:].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="38">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Nachname</th>
-<th data-quarto-table-cell-role="th">Vorname</th>
-<th data-quarto-table-cell-role="th">Aufgabe 1</th>
-<th data-quarto-table-cell-role="th">Aufgabe 2</th>
-<th data-quarto-table-cell-role="th">Aufgabe 3</th>
-<th data-quarto-table-cell-role="th">Aufgabe 4</th>
-<th data-quarto-table-cell-role="th">Aufgabe 5</th>
-<th data-quarto-table-cell-role="th">Aufgabe 6</th>
-<th data-quarto-table-cell-role="th">Aufgabe 7</th>
-<th data-quarto-table-cell-role="th">Aufgabe 8</th>
-<th data-quarto-table-cell-role="th">Aufgabe 9</th>
-<th data-quarto-table-cell-role="th">Aufgabe 10</th>
-<th data-quarto-table-cell-role="th">Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Müller</td>
-<td>Hans</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>5</td>
-<td>2</td>
-<td>3</td>
-<td>29</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Gerber</td>
-<td>Verena</td>
-<td>1</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>0</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>28</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Meier</td>
-<td>Urs</td>
-<td>3</td>
-<td>3</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>5</td>
-<td>5</td>
-<td>30</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Keller</td>
-<td>Anna</td>
-<td>5</td>
-<td>1</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>0</td>
-<td>24</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>Schmid</td>
-<td>Reto</td>
-<td>2</td>
-<td>4</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>2</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>28</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
+<div id="cell-37" class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>noten[<span class="st">'Total'</span>] <span class="op">=</span> noten.iloc[:,<span class="dv">2</span>:].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Alternativ können die Zellen auch mit <code>.loc</code> angesprochen werden. <code>.loc</code> bietet den Vorzug, dass die Koordinaten mit den Namen der Zeilen- bzw. Spaltenköpfen angesprochen werden können.</p>
-<div id="cell-38" class="cell" data-execution_count="39">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>noten[<span class="st">'Total'</span>] <span class="op">=</span> noten.loc[:,<span class="st">'Aufgabe 1'</span>: <span class="st">'Aufgabe 10'</span>].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="39">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Nachname</th>
-<th data-quarto-table-cell-role="th">Vorname</th>
-<th data-quarto-table-cell-role="th">Aufgabe 1</th>
-<th data-quarto-table-cell-role="th">Aufgabe 2</th>
-<th data-quarto-table-cell-role="th">Aufgabe 3</th>
-<th data-quarto-table-cell-role="th">Aufgabe 4</th>
-<th data-quarto-table-cell-role="th">Aufgabe 5</th>
-<th data-quarto-table-cell-role="th">Aufgabe 6</th>
-<th data-quarto-table-cell-role="th">Aufgabe 7</th>
-<th data-quarto-table-cell-role="th">Aufgabe 8</th>
-<th data-quarto-table-cell-role="th">Aufgabe 9</th>
-<th data-quarto-table-cell-role="th">Aufgabe 10</th>
-<th data-quarto-table-cell-role="th">Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Müller</td>
-<td>Hans</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>5</td>
-<td>2</td>
-<td>3</td>
-<td>29</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Gerber</td>
-<td>Verena</td>
-<td>1</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>0</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>28</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Meier</td>
-<td>Urs</td>
-<td>3</td>
-<td>3</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>5</td>
-<td>5</td>
-<td>30</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Keller</td>
-<td>Anna</td>
-<td>5</td>
-<td>1</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>0</td>
-<td>24</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>Schmid</td>
-<td>Reto</td>
-<td>2</td>
-<td>4</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>2</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>28</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
+<div id="cell-39" class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>noten[<span class="st">'Total'</span>] <span class="op">=</span> noten.loc[:,<span class="st">'Aufgabe 1'</span>: <span class="st">'Aufgabe 10'</span>].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die anschliessende Berechnung der Note ist deutlich einfacher. Bei einem hypothetischen Punktemaximum von 50 Punkten berechnet sich die Note bei einem linearen Notenmassstab nach der Formel</p>
 <p><span class="math display">\[
 \frac{\text{Total}}{\text{Moeglich}} \times 5 + 1
 \]</span></p>
 <p>Für den Dataframe sieht das folgendermassen aus:</p>
-<div id="cell-40" class="cell" data-execution_count="40">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>moeglich <span class="op">=</span> <span class="dv">50</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>noten[<span class="st">'Note'</span>] <span class="op">=</span> noten[<span class="st">'Total'</span>] <span class="op">/</span> moeglich <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="40">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Nachname</th>
-<th data-quarto-table-cell-role="th">Vorname</th>
-<th data-quarto-table-cell-role="th">Aufgabe 1</th>
-<th data-quarto-table-cell-role="th">Aufgabe 2</th>
-<th data-quarto-table-cell-role="th">Aufgabe 3</th>
-<th data-quarto-table-cell-role="th">Aufgabe 4</th>
-<th data-quarto-table-cell-role="th">Aufgabe 5</th>
-<th data-quarto-table-cell-role="th">Aufgabe 6</th>
-<th data-quarto-table-cell-role="th">Aufgabe 7</th>
-<th data-quarto-table-cell-role="th">Aufgabe 8</th>
-<th data-quarto-table-cell-role="th">Aufgabe 9</th>
-<th data-quarto-table-cell-role="th">Aufgabe 10</th>
-<th data-quarto-table-cell-role="th">Total</th>
-<th data-quarto-table-cell-role="th">Note</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Müller</td>
-<td>Hans</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>5</td>
-<td>2</td>
-<td>3</td>
-<td>29</td>
-<td>3.9</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Gerber</td>
-<td>Verena</td>
-<td>1</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>0</td>
-<td>5</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>28</td>
-<td>3.8</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Meier</td>
-<td>Urs</td>
-<td>3</td>
-<td>3</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>5</td>
-<td>5</td>
-<td>30</td>
-<td>4.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Keller</td>
-<td>Anna</td>
-<td>5</td>
-<td>1</td>
-<td>0</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>0</td>
-<td>24</td>
-<td>3.4</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>Schmid</td>
-<td>Reto</td>
-<td>2</td>
-<td>4</td>
-<td>5</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>2</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>28</td>
-<td>3.8</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
+<div id="cell-41" class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>moeglich <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>noten[<span class="st">'Note'</span>] <span class="op">=</span> noten[<span class="st">'Total'</span>] <span class="op">/</span> moeglich <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>noten.head()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Gegenüber der Berechnung in einem Tabellenkalkulationsprogramm bietet Pandas im gezeigten Zusammenhang drei Vorteile:</p>
 <ul>
@@ -995,14 +479,13 @@ c = \sqrt{a^2 + b^2}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
