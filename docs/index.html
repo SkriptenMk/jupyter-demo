@@ -218,6 +218,11 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="notebook-online-ausführen">Notebook online ausführen</h2>
 <p>Grundsätzlich können Jupyter Notebooks lokal auf dem eigenen Rechner bearbeitet werden. Um den Installationsaufwand für diese Demonstration zu umgehen, stehen hier drei Möglichkeiten zur Verfügung, das Beispielnotebook online zu bearbeiten.</p>
 <p><a href="https://colab.research.google.com/github/SkriptenMk/jupyter-demo/blob/main/index.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a> <a href="https://mybinder.org/v2/gh/SkriptenMk/jupyter-demo/main?labpath=index.ipynb"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <a href="https://kaggle.com/kernels/welcome?src=https://github.com/SkriptenMk/jupyter-demo/blob/main/index.ipynb"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" class="img-fluid" alt="Kaggle"></a></p>
+<p>Allen, welche gerne auf dem eigenen Rechner weiterarbeiten wollen, seien die beiden Anleitungen empfohlen:</p>
+<ul>
+<li><a href="https://www.anaconda.com/download">Anaconda</a>: Die komfortable Gesamtlösung. Allerdings ist der Speicherplatzbedarf relativ hoch.</li>
+<li><a href="https://jupyter.org/install">Direktinstallation</a> (via venv und pip): Eine massgeschneiderte Lösung. Allerdings erfordert diese Installation Arbeiten im Terminal.</li>
+</ul>
 </section>
 <section id="was-ein-jupyter-notebook-auszeichnet" class="level2">
 <h2 class="anchored" data-anchor-id="was-ein-jupyter-notebook-auszeichnet">Was ein Jupyter Notebook auszeichnet</h2>
@@ -500,7 +505,7 @@ c = \sqrt{a^2 + b^2}
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/SkriptenMk\.github\.io\/jupyter-demo\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

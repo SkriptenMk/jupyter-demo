@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Demonstration Jupyter Notebooks",
     "section": "",
-    "text": "Grundsätzlich können Jupyter Notebooks lokal auf dem eigenen Rechner bearbeitet werden. Um den Installationsaufwand für diese Demonstration zu umgehen, stehen hier drei Möglichkeiten zur Verfügung, das Beispielnotebook online zu bearbeiten."
+    "text": "Grundsätzlich können Jupyter Notebooks lokal auf dem eigenen Rechner bearbeitet werden. Um den Installationsaufwand für diese Demonstration zu umgehen, stehen hier drei Möglichkeiten zur Verfügung, das Beispielnotebook online zu bearbeiten.\n  \nAllen, welche gerne auf dem eigenen Rechner weiterarbeiten wollen, seien die beiden Anleitungen empfohlen:\n\nAnaconda: Die komfortable Gesamtlösung. Allerdings ist der Speicherplatzbedarf relativ hoch.\nDirektinstallation (via venv und pip): Eine massgeschneiderte Lösung. Allerdings erfordert diese Installation Arbeiten im Terminal."
   },
   {
     "objectID": "index.html#notebook-online-ausführen",
     "href": "index.html#notebook-online-ausführen",
     "title": "Demonstration Jupyter Notebooks",
     "section": "",
-    "text": "Grundsätzlich können Jupyter Notebooks lokal auf dem eigenen Rechner bearbeitet werden. Um den Installationsaufwand für diese Demonstration zu umgehen, stehen hier drei Möglichkeiten zur Verfügung, das Beispielnotebook online zu bearbeiten."
+    "text": "Grundsätzlich können Jupyter Notebooks lokal auf dem eigenen Rechner bearbeitet werden. Um den Installationsaufwand für diese Demonstration zu umgehen, stehen hier drei Möglichkeiten zur Verfügung, das Beispielnotebook online zu bearbeiten.\n  \nAllen, welche gerne auf dem eigenen Rechner weiterarbeiten wollen, seien die beiden Anleitungen empfohlen:\n\nAnaconda: Die komfortable Gesamtlösung. Allerdings ist der Speicherplatzbedarf relativ hoch.\nDirektinstallation (via venv und pip): Eine massgeschneiderte Lösung. Allerdings erfordert diese Installation Arbeiten im Terminal."
   },
   {
     "objectID": "index.html#was-ein-jupyter-notebook-auszeichnet",
